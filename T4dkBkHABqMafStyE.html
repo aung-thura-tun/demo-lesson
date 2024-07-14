@@ -1,0 +1,227 @@
+<html><head><base href="https://websim-langstudy.edu" /></head><body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Study Hub - What kind of things are you into?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .example-box {
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1rem;
+            margin-top: 0.5rem;
+            background-color: #f8fafc;
+            border-radius: 0.375rem;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto max-w-4xl bg-white shadow-lg rounded-lg overflow-hidden my-10">
+        <header class="bg-blue-600 text-white p-5">
+            <h1 class="text-3xl font-bold">1A: What kind of things are you into?</h1>
+        </header>
+
+        <div class="p-5">
+            <div class="mb-5 bg-yellow-100 border-l-4 border-yellow-500 p-4">
+                <h2 class="font-bold">In this lesson, you:</h2>
+                <ul class="list-disc ml-5">
+                    <li>discuss how you spend your free time</li>
+                    <li>describe films, books and music</li>
+                    <li>practise listening to people talk about films</li>
+                    <li>politely disagree with opinions</li>
+                </ul>
+            </div>
+
+            <div class="mb-5">
+                <div class="flex border-b">
+                    <button class="tab-button px-4 py-2 font-semibold" onclick="openTab(event, 'listening')">Listening</button>
+                    <button class="tab-button px-4 py-2 font-semibold" onclick="openTab(event, 'grammar')">Grammar</button>
+                    <button class="tab-button px-4 py-2 font-semibold" onclick="openTab(event, 'exercises')">Exercises</button>
+                </div>
+
+                <div id="listening" class="tab-content">
+                    <h3 class="text-xl font-bold mt-4">Listening</h3>
+                    <p>Eight people were asked questions using the structure <em>Do you ... much?</em> Listen and write the question you think each person was asked.</p>
+                    <audio controls class="mt-2">
+                        <source src="listening_exercise.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div id="grammar" class="tab-content">
+                    <h3 class="text-xl font-bold mt-4">Grammar: Habits</h3>
+                    <p>To talk about habits, we use the present and past simple as well as structures such as <em>tend to</em> and <em>used to</em>. We also use words and phrases such as <em>rarely</em>, <em>not as much as</em> and <em>all the time</em> to show how often.</p>
+                    <ul class="list-disc ml-5 mt-2">
+                        <li>My friends and I <strong>go out all the time</strong>.</li>
+                        <li>I <strong>sometimes played</strong> it for eight or nine hours a day.</li>
+                        <li>I <strong>don't tend to</strong> / I <strong>tend not to</strong> read much fiction.</li>
+                        <li><strong>Did you (ever) use to</strong> watch 'Betty la fea'?</li>
+                        <li>We<strong>'d</strong> hang out all the time, but now we <strong>hardly ever do</strong>.</li>
+                        <li><strong>Not as a rule</strong>, no, but I do listen to some jazz every now and then.</li>
+                    </ul>
+                </div>
+
+                <div id="exercises" class="tab-content">
+                    <h3 class="text-xl font-bold mt-4">Exercises</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h4 class="accordion-header cursor-pointer bg-gray-200 px-4 py-2 rounded-t-lg" onclick="toggleAccordion(this)">Exercise 2</h4>
+                            <div class="accordion-content hidden p-4 border border-gray-200">
+                                <div class="flex">
+                                    <div class="w-1/2 pr-2">
+                                        <p>Look at the examples in the Grammar box. Find:</p>
+                                        <ol class="list-decimal ml-5">
+                                            <li>three sentences about present habits.</li>
+                                            <li>a verb that describes a current habit – it means (not) usually / generally.</li>
+                                            <li>three different structures we use to talk about past habits.</li>
+                                            <li>phrases that mean always, (not) normally, sometimes and almost never.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="w-1/2 pl-2">
+                                        <div class="example-box">
+                                            <ul class="list-disc pl-4">
+                                                <li>My friends and I go out all the time.</li>
+                                                <li>I sometimes played it for eight or nine hours a day.</li>
+                                                <li>I don't tend to / I tend not to read much fiction.</li>
+                                                <li>Did you (ever) use to watch 'Betty la fea'?</li>
+                                                <li>We'd hang out all the time, but now we hardly ever do.</li>
+                                                <li>Not as a rule, no, but I do listen to some jazz every now and then.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="showAnswers('ex2')">Show/Hide Answers</button>
+                                <div id="ex2-answers" class="hidden mt-4"></div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mt-2">
+                            <h4 class="accordion-header cursor-pointer bg-gray-200 px-4 py-2" onclick="toggleAccordion(this)">Exercise 3</h4>
+                            <div class="accordion-content hidden p-4 border border-gray-200">
+                                <p>Complete the sentences by adding one word in each gap.</p>
+                                <ol class="list-decimal ml-5">
+                                    <li>I don't <input type="text" class="border rounded px-2 py-1 w-24"> to go to many concerts these days. I'm too busy working.</li>
+                                    <li>I mostly read stuff for work, but I do read novels every now and <input type="text" class="border rounded px-2 py-1 w-24">.</li>
+                                    <li>He's basically on TikTok all the <input type="text" class="border rounded px-2 py-1 w-24">. It's taken over his life.</li>
+                                    <li>We don't go to the cinema as much as we <input type="text" class="border rounded px-2 py-1 w-24"> to before we had kids.</li>
+                                    <li>I <input type="text" class="border rounded px-2 py-1 w-24"> ever read books, to be honest. I just read stuff online.</li>
+                                    <li>I used to go out a lot. I <input type="text" class="border rounded px-2 py-1 w-24"> often go clubbing four or five nights a week.</li>
+                                    <li>As a <input type="text" class="border rounded px-2 py-1 w-24">, I tend not to listen to dance music. It's not my kind of thing.</li>
+                                    <li><input type="text" class="border rounded px-2 py-1 w-24"> you ever get to go to the Teatro Colón when you lived in Buenos Aires?</li>
+                                </ol>
+                                <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded" onclick="checkAnswers()">Check Answers</button>
+                                <button class="mt-4 ml-2 bg-gray-500 text-white px-4 py-2 rounded" onclick="resetAnswers()">Reset</button>
+                                <div id="ex3-answers" class="hidden mt-4"></div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mt-2">
+                            <h4 class="accordion-header cursor-pointer bg-gray-200 px-4 py-2 rounded-b-lg" onclick="toggleAccordion(this)">Exercise 4</h4>
+                            <div class="accordion-content hidden p-4 border border-gray-200">
+                                <p>Take notes on how your habits have changed. Think about these areas:</p>
+                                <ul class="list-disc ml-5">
+                                    <li>work</li>
+                                    <li>study</li>
+                                    <li>holiday</li>
+                                    <li>eating</li>
+                                    <li>family</li>
+                                </ul>
+                                <p class="mt-4">Share your ideas with a partner, using some of the structures from Exercise 2. Ask your partner questions to find out more.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tabButtons;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            tabButtons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" bg-blue-500 text-white", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " bg-blue-500 text-white";
+        }
+
+        function toggleAccordion(header) {
+            var content = header.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+
+        function showAnswers(exerciseId) {
+            var answersDiv = document.getElementById(exerciseId + '-answers');
+            if (answersDiv.innerHTML === "") {
+                var answers = {
+                    'ex2': [
+                        "Present habits: <b>My friends and I go out all the time, I don't tend to read much fiction, Not as a rule, no, but I do listen to some jazz every now and then</b>",
+                        "Verb describing current habit (means not usually/generally): <b>tend not to</b>",
+                        "Structures for past habits: <b>sometimes played, Did you (ever) use to, We'd hang out</b>",
+                        "Phrases meaning always, (not) normally, sometimes, almost never: <b>all the time, tend to, sometimes, hardly ever</b>"
+                    ]
+                };
+                
+                var answerHTML = "";
+                answers[exerciseId].forEach((answer, index) => {
+                    answerHTML += `<p>${index + 1}. ${answer}</p>`;
+                });
+                answersDiv.innerHTML = answerHTML;
+            }
+            answersDiv.style.display = answersDiv.style.display === "none" ? "block" : "none";
+        }
+
+        function checkAnswers() {
+            var answers = ['tend', 'then', 'time', 'used', 'hardly', 'would', 'rule', 'Did'];
+            var inputs = document.querySelectorAll('#exercises input[type="text"]');
+            var answersDiv = document.getElementById('ex3-answers');
+            var answerHTML = "";
+            
+            inputs.forEach((input, index) => {
+                var userAnswer = input.value.trim().toLowerCase();
+                var correctAnswer = answers[index].toLowerCase();
+                var isCorrect = userAnswer === correctAnswer;
+                
+                var feedback = isCorrect ? '✅ Correct!' : '❌ Not quite.';
+                
+                if (!isCorrect) {
+                    if (userAnswer === '') {
+                        feedback += " You didn't enter an answer.";
+                    } else if (correctAnswer.includes(userAnswer) || userAnswer.includes(correctAnswer)) {
+                        feedback += " Your answer is close, but not exact.";
+                    } else {
+                        feedback += ` The correct answer is "${answers[index]}".`;
+                    }
+                }
+                
+                answerHTML += `<p>${index + 1}. ${feedback}</p>`;
+            });
+            
+            answersDiv.innerHTML = answerHTML;
+            answersDiv.style.display = "block";
+        }
+
+        function resetAnswers() {
+            var inputs = document.querySelectorAll('#exercises input[type="text"]');
+            inputs.forEach(input => {
+                input.value = '';
+            });
+            document.getElementById('ex3-answers').innerHTML = '';
+            document.getElementById('ex3-answers').style.display = 'none';
+        }
+
+        // Initialize the first tab as active
+        document.getElementsByClassName("tab-button")[0].click();
+    </script>
+</body>
+</html>
+</body></html>
